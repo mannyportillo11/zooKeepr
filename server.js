@@ -66,6 +66,23 @@ function createNewAnimal(body, animalsArray) {
   return animal;
 }
 
+//validation
+function validateAnimal (animal) {
+  if (!animal.name || typeof animal.name !== 'string') {
+    return false;
+  }
+  if (!animal.species || typeof animal.species !== 'string') {
+    return false;
+  }
+  if (!animal.diet || typeof animal.diet !== 'string') {
+    return false;
+  }
+  if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
+    return false;
+  }
+  return true;
+}
+
 app.get('/api/animals', (req, res) => {
     let results =  animals;
     if (req.query) {
@@ -90,11 +107,17 @@ app.post('/api/animals', (req, res) => {
   //set id based on what the next index of the array will be
   req.body.id = animals.length.toString();
 
-  //add animals to json file and animals array in this function
-  const animal = createNewAnimal(req.body, animals);
-  //req.body is where our incoming content will be
-  console.log(req.body); //use console log to view the data
-  res.json(animal); //use res.json to send the data back to the client
+  // if any data in req.body is incorrect, send 400 error back
+  if (!validateAnimal(req.body)) {
+    res.status(400).send('The animal is not properly formatted.');
+  } else {
+    //add animals to json file and animals array in this function
+    const animal = createNewAnimal(req.body, animals);
+    
+    //req.body is where our incoming content will be
+    console.log(req.body); //use console log to view the data
+    res.json(animal); //use res.json to send the data back to the client
+  }
 });
 
 app.listen(PORT, () => {
