@@ -162,6 +162,33 @@
         "sleepy"
       ],
       "id": "16"
+    },
+    {
+      "name": "Tobias",
+      "species": "Oso",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "17"
+    },
+    {
+      "name": "Tobias",
+      "species": "Oso",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "Tobias",
+      "species": "Oso",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving"
+      ],
+      "id": "19"
     }
   ]
 }

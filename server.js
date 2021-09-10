@@ -8,7 +8,11 @@ const app = express();
   app.use(express.urlencoded({ extended: true })); //built in method; takes incoming POST data and converts it to key/value pairs that are accessed in req.body
   // parse incoming JSON data
   app.use(express.json()); //takes incoming POST data in the form of JSON and parses it into the req.body javascript object
-  //need both MIDDLEWARE functions set up every time you create a server that is looking to accept POST data 
+  //need both MIDDLEWARE functions set up every time you create a server that is looking to accept POST data
+
+  //middleware to create file path to CSS and JS files located in public folder to make static resources, with no specific server endpoint
+  app.use(express.static('public'));
+
 const { animals } = require( './data/animals')
 
 function filterByQuery(query, animalsArray) {
@@ -115,9 +119,24 @@ app.post('/api/animals', (req, res) => {
     const animal = createNewAnimal(req.body, animals);
     
     //req.body is where our incoming content will be
-    console.log(req.body); //use console log to view the data
     res.json(animal); //use res.json to send the data back to the client
   }
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));  //serving the html file
+});
+
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+app.get('*', (req, res) => { //WILDCARD catch all, always comes last
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.listen(PORT, () => {
