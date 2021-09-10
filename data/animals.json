@@ -135,6 +135,33 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Manny",
+      "species": "Bear",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "sleepy"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Manny",
+      "species": "Bear",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "sleepy"
+      ],
+      "id": "15"
+    },
+    {
+      "name": "Manny",
+      "species": "Bear",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "sleepy"
+      ],
+      "id": "16"
     }
   ]
 }
