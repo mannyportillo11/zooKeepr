@@ -119,76 +119,22 @@
       "id": "11"
     },
     {
-      "name": "Larry",
-      "species": "lemur",
-      "diet": "omnivore",
+      "name": "Manny",
+      "species": "Bear",
+      "diet": "carnivore",
       "personalityTraits": [
-        "hungry"
+        "sleepy"
       ],
       "id": "12"
     },
     {
-      "name": "Larry",
-      "species": "lemur",
-      "diet": "omnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "13"
-    },
-    {
-      "name": "Manny",
-      "species": "Bear",
+      "name": "Tobias",
+      "species": "Oso",
       "diet": "carnivore",
       "personalityTraits": [
-        "sleepy"
-      ],
-      "id": "14"
-    },
-    {
-      "name": "Manny",
-      "species": "Bear",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "sleepy"
+        "loving"
       ],
       "id": "15"
-    },
-    {
-      "name": "Manny",
-      "species": "Bear",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "sleepy"
-      ],
-      "id": "16"
-    },
-    {
-      "name": "Tobias",
-      "species": "Oso",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "loving"
-      ],
-      "id": "17"
-    },
-    {
-      "name": "Tobias",
-      "species": "Oso",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "loving"
-      ],
-      "id": "18"
-    },
-    {
-      "name": "Tobias",
-      "species": "Oso",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "loving"
-      ],
-      "id": "19"
     }
   ]
 }
